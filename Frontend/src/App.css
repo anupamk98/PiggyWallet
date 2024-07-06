@@ -1,0 +1,112 @@
+body{
+  color: white;
+}
+main{
+max-width: 600px;
+margin: 30px auto;
+padding: 25px;
+}
+
+h1{
+  text-align: center;
+  color: white;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+input{
+border-radius: 10px;
+padding:10px 8px;
+outline: none;
+background: transparent;
+border: 2px solid  #48484d;
+color: #fff;
+}
+
+.c1{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.c1 input{
+  width: 50%;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.sub{
+  cursor: pointer;
+  background: white;
+  color: black;
+  border: none;
+}
+
+.transaction{
+  display: flex;
+  padding: 5px 0;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-top: 1px solid #48484d ;
+}
+
+.transaction:first-child{
+  border-top: none;
+}
+
+.transaction:nth-child(2){
+  border-top: none;
+}
+
+.name{
+  font-size: 1.2rem;
+}
+
+.desc{
+  font-size: .8rem;
+  color: #888;
+}
+.price{
+  font-size: 1.2rem;
+}
+
+.date{
+  font-size: .8rem;
+  color: #888;
+}
+.right {
+  text-align: right;
+}
+
+.green{
+  color: #1c1;
+}
+
+.red{
+  color: #c11;
+}
+
+@media screen and (max-width:400px) {
+  .c1{
+    flex-wrap: wrap;
+  }
+  .c1 input{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:565px) {
+  .Nav{
+    flex-direction: col;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+
+}
