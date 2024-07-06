@@ -4,7 +4,7 @@ import { Username } from './context'
 const Navbar = (props) => {
   const user= useContext(Username)
   async function handlelogout() {
-    await fetch('http://localhost:4000/logout',{
+    await fetch('http://localhost:8080/logout',{
       credentials:'include'
     })
     user.setcontext("")
