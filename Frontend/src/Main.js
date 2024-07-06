@@ -12,7 +12,7 @@ const Main = () => {
 
     useEffect(() => {
       async function getpost() {
-      const response =  await fetch('http://localhost:8080/posts',
+      const response =  await fetch('https://piggywallet.onrender.com/posts',
           {
             method:'POST',
             body : JSON.stringify({username:temp.context}),
@@ -33,7 +33,7 @@ const Main = () => {
       e.preventDefault()
       let Name = name.split(' ')[0]
       let Price = name.substring(Name.length+1)
-      const response =  await fetch('http://localhost:8080/submitpost',
+      const response =  await fetch('https://piggywallet.onrender.com/submitpost',
         {
           method:'POST',
           body : JSON.stringify({Name,Price,datetime,desc,username:temp.context}),
