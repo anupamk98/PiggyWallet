@@ -71,7 +71,10 @@ else res.json("failed")
 })
 
 app.get("/logout",(req,res)=>{
-    res.cookie("token","").json("ok")
+    res.cookie("token","",{
+        secure : true,
+        sameSite : 'none'}
+        ).json("ok")
 })
 
 app.post("/posts",async (req,res)=>{
