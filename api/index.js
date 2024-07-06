@@ -89,3 +89,5 @@ await user.save()
 res.json("ok") 
 })
 
+app.listen(3000)
+
