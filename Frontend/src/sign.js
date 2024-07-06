@@ -13,7 +13,7 @@ const Sign = () => {
   const temp =useContext(Username)
   async function handleSubmit(e){
   e.preventDefault()
-  const response =  await fetch('http://localhost:4000/signup',
+  const response =  await fetch('http://localhost:8080/signup',
     {
       method:'POST',
       body : JSON.stringify({name,username,pass}),
