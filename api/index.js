@@ -12,7 +12,7 @@ mongoose.connect(process.env.MONGO_DB_URL)
 const Usermodel = require('./models/user')
 const Paymodel = require('./models/payment')
 
-app.use(cors({credentials:true,origin:'http://localhost:3000'}))
+app.use(cors({credentials:true,origin:'https://piggywalletbykonwar.netlify.app/'}))
 app.use(express.static(path.join(__dirname,"public")))
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
@@ -89,4 +89,3 @@ await user.save()
 res.json("ok") 
 })
 
-app.listen(8080)
