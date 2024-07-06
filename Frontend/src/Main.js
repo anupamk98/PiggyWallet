@@ -33,7 +33,7 @@ const Main = () => {
       e.preventDefault()
       let Name = name.split(' ')[0]
       let Price = name.substring(Name.length+1)
-      const response =  await fetch('http://localhost:4000/submitpost',
+      const response =  await fetch('http://localhost:8080/submitpost',
         {
           method:'POST',
           body : JSON.stringify({Name,Price,datetime,desc,username:temp.context}),
