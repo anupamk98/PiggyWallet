@@ -13,7 +13,7 @@ function App() {
   const [toggle, settoggle] = useState(0)
   useEffect(() => {
     async function DejaVu() {
-    const response = await fetch('https://piggywallet.onrender.com/profile',{
+    const response = await fetch('https://piggywallet-1.onrender.com/profile',{
       credentials:'include'
     })
     const res = await response.json()
