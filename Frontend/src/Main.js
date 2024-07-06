@@ -12,7 +12,7 @@ const Main = () => {
 
     useEffect(() => {
       async function getpost() {
-      const response =  await fetch('http://localhost:4000/posts',
+      const response =  await fetch('http://localhost:8080/posts',
           {
             method:'POST',
             body : JSON.stringify({username:temp.context}),
