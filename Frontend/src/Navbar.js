@@ -4,7 +4,7 @@ import { Username } from './context'
 const Navbar = (props) => {
   const user= useContext(Username)
   async function handlelogout() {
-    await fetch('http://localhost:8080/logout',{
+    await fetch('https://piggywallet.onrender.com/logout',{
       credentials:'include'
     })
     user.setcontext("")
