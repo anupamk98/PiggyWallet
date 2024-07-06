@@ -13,7 +13,7 @@ const Sign = () => {
   const temp =useContext(Username)
   async function handleSubmit(e){
   e.preventDefault()
-  const response =  await fetch('https://piggywallet.onrender.com/signup',
+  const response =  await fetch('https://piggywallet-1.onrender.com/signup',
     {
       method:'POST',
       body : JSON.stringify({name,username,pass}),
