@@ -48,7 +48,9 @@ app.post("/login",async (req,res)=>{
     bcrypt.compare(pass,user.password,(err,result)=>{
     if(result){
         let token =jwt.sign({username,userid:user._id},process.env.COOKIE_STRING)
-        res.cookie("jwtcookie",token).json("ok")
+        res.cookie("token",token,{
+            sameSite : 'none'
+        }).json("ok")
     }
     else res.json("failed")
     })
@@ -58,7 +60,7 @@ app.post("/login",async (req,res)=>{
 app.get("/profile",(req,res)=>{
 let obj = req.cookies.token
 if((obj != null)) {
-const data = jwt.verify(req.cookies.jwtcookie,process.env.COOKIE_STRING)
+const data = jwt.verify(req.cookies.token,process.env.COOKIE_STRING)
 res.json(data)
 }
 else res.json("failed")
