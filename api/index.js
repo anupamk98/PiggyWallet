@@ -49,6 +49,7 @@ app.post("/login",async (req,res)=>{
     if(result){
         let token =jwt.sign({username,userid:user._id},process.env.COOKIE_STRING)
         res.cookie("token",token,{
+            secure : true,
             sameSite : 'none'
         }).json("ok")
     }
