@@ -13,7 +13,7 @@ function App() {
   const [toggle, settoggle] = useState(0)
   useEffect(() => {
     async function DejaVu() {
-    const response = await fetch('http://localhost:4000/profile',{
+    const response = await fetch('http://localhost:8080/profile',{
       credentials:'include'
     })
     const res = await response.json()
