@@ -12,7 +12,7 @@ mongoose.connect(process.env.MONGO_DB_URL)
 const Usermodel = require('./models/user')
 const Paymodel = require('./models/payment')
 
-app.use(cors({credentials:true,origin:'https://moneytracker98.netlify.app'}))
+app.use(cors({credentials:true,origin:'https://piggy-wallet.vercel.app/'}))
 app.use(express.static(path.join(__dirname,"public")))
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
