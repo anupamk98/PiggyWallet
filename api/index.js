@@ -34,7 +34,10 @@ else {
                 name,username,password:hash
             })
             let token =jwt.sign({username,userid:newuser._id},process.env.COOKIE_STRING)
-            res.cookie("token",token).json("ok")
+            res.cookie("token",token,{
+            secure : true,
+            sameSite : 'none'
+        }).json("ok")
         })
     })
 }
