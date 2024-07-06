@@ -48,7 +48,7 @@ app.post("/login",async (req,res)=>{
     bcrypt.compare(pass,user.password,(err,result)=>{
     if(result){
         let token =jwt.sign({username,userid:user._id},process.env.COOKIE_STRING)
-        res.cookie("token",token).json("ok")
+        res.cookie("token",token).json(token)
     }
     else res.json("failed")
     })
